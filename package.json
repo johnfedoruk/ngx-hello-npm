@@ -15,7 +15,7 @@
     "build": "npm run clean && tsc -p src && tsc",
     "prepublish": "npm run ngc-build",
     "ngc-build": "rm -rf lib && rm -rf \"src/node_modules\" && \"node_modules/.bin/ngc\" -p tsconfig-aot.json",
-    "clean": "rm -rf lib app/*.js app/**/*.js app/*.map app/**/*.map src/*.js src/**/*.js src/*.map src/**/*.map"
+    "clean": "rm -rf lib app/*.js app/**/*.js app/*.map app/**/*.map src/*.js src/**/*.js src/*.map src/**/*.map src/*.ngsummary.json src/**/*.ngsummary.json src/*.ngfactory.ts src/**/*.ngfactory.ts"
   },
   "main": "./index.js",
   "types": "./index.d.ts",
