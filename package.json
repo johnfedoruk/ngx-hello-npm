@@ -1,6 +1,6 @@
 {
   "name": "ngx-hello-npm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Starter for creating Angular NPM packages.",
   "scripts": {
     "start": "npm run build && concurrently \"tsc -w\" \"tsc -p src -w\" \"lite-server\" ",
