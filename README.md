@@ -1,5 +1,8 @@
 # ngx-hello-npm
 
+[![Build Status](https://travis-ci.org/johnfedoruk/ngx-hello-npm.svg?branch=master)](https://travis-ci.org/johnfedoruk/ngx-hello-npm)
+[![npm version](https://badge.fury.io/js/ngx-hello-npm.svg)](https://badge.fury.io/js/ngx-hello-npm)
+
 Starter for creating Angular NPM packages.
 
 ## Install in your project
