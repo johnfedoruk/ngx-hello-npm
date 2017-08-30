@@ -11,5 +11,8 @@ lib
 src/**/*.js
 
 ## ngc compiler files
-src/*.ngfactory.ts
-src/*.ngsummary.json
+*.ngfactory.ts
+*.ngsummary.json
+
+## pack files
+*.tgz
