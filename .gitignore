@@ -40,3 +40,10 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+## ngc compiler files
+./**/*.ngfactory.ts
+./**/*.ngsummary.json
+
+## pack files
+*.tgz

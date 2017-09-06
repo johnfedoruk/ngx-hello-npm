@@ -19,11 +19,11 @@
     "ng": "ng",
     "start": "ng serve",
     "test": "ng test",
-    "test-once": "npm run ngc-build && karma start karma.conf.js --single-run",
+    "test-once": "karma start karma.conf.js --single-run",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "prepublish": "npm run ngc-build",
-    "ngc-build": "npm run clean && \"node_modules/.bin/ngc\" -p tsconfig-aot.json",
+    "prepublish": "npm run clean && npm run ngc-build",
+    "ngc-build": "\"node_modules/.bin/ngc\" -p tsconfig-aot.json",
     "clean": "PACKAGE_SRC=\"src/app/hello\" && rm -rf lib \"$PACKAGE_SRC\"/*.js \"$PACKAGE_SRC\"/**/*.js \"$PACKAGE_SRC\"/*.map \"$PACKAGE_SRC\"/**/*.map \"$PACKAGE_SRC\"/*.ngsummary.json \"$PACKAGE_SRC\"/**/*.ngsummary.json \"$PACKAGE_SRC\"/*.ngfactory.ts \"$PACKAGE_SRC\"/**/*.ngfactory.ts"
   },
   "dependencies": {
