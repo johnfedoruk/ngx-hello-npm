@@ -42,8 +42,11 @@ testem.log
 Thumbs.db
 
 ## ngc compiler files
-./**/*.ngfactory.ts
-./**/*.ngsummary.json
+**/*.ngfactory.ts
+**/*.ngsummary.json
+
+## lib files
+lib
 
 ## pack files
 *.tgz
