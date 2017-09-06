@@ -1,14 +1,14 @@
-import { Ng4HelloNpmPage } from './app.po';
+import { NgxHelloNpmPage } from './app.po';
 
-describe('ng4-hello-npm App', () => {
-  let page: Ng4HelloNpmPage;
+describe('ngx-hello-npm App', () => {
+  let page: NgxHelloNpmPage;
 
   beforeEach(() => {
-    page = new Ng4HelloNpmPage();
+    page = new NgxHelloNpmPage();
   });
 
-  it('should display message saying app works', () => {
+  it(`should display message saying 'Hello, NPM!'`, () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('Hello, NPM!');
   });
 });

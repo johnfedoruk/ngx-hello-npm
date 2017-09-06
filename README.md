@@ -1,28 +1,68 @@
-# Ng4HelloNpm
+# ngx-hello-npm
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.2.
+[![Build Status](https://travis-ci.org/johnfedoruk/ngx-hello-npm.svg?branch=master)](https://travis-ci.org/johnfedoruk/ngx-hello-npm)
+[![npm version](https://badge.fury.io/js/ngx-hello-npm.svg)](https://badge.fury.io/js/ngx-hello-npm)
 
-## Development server
+Starter for creating Angular NPM packages.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Install in your project
 
-## Code scaffolding
+`npm install ngx-hello-npm --save`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+## Using the Component
+### Add Component to Module imports
+```
+import { HelloModule } from 'ngx-hello-npm';
+...
+@NgModule({
+ ...
+   declarations: [
+        AppComponent,
+        ...
+    ],
+    imports: [
+      BrowserModule,
+      FormsModule,
+      HelloModule,
+      ...
+ ...
+})
+export class AppModule {}
+```
+### Add Component to your Application
+```
+@Component({
+    selector: 'my-app',
+    template: `
+    <h3>Hello NPM</h3>
+    <div>
+        <hello></hello>
+    </div>
+  `,
+})
+export class App {
+   ...
+}
+```
 
-## Build
+## Developers
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+The `index.js` file exports the HelloModule from the `./src/app/hello` directory. TypeScript definition files are in the `index.d.ts` file. If changing the directory of the exported module, or adding exported modules, please update these two index files and make the necessary changes to `tsconfig-aot.json`'s "include" array. You may also want to update the npm clean script.
 
-## Running unit tests
+### Run the example application locally
+- `git clone https://github.com/johnfedoruk/ngx-hello-npm`
+- `cd ngx-hello-npm`
+- `npm install`
+- `ng serve` # Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Run the tests locally
+- Same as above, except for the last step do:
+- `npm run test-once` # Executes the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+### Running end-to-end tests
+- Same as above, except for the last step do:
+- `ng e2e` # Executes the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+### License
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+[MIT](https://tldrlegal.com/license/mit-license)
